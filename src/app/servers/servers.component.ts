@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   allowNewServer = false;
+  serverStatus = "server is down";
 
   constructor() {
     setTimeout(() => {
@@ -16,6 +17,14 @@ export class ServersComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  getServerStatus(){
+    return this.serverStatus;
+  }
+
+  bringServerUp(){
+    this.serverStatus = "up";
   }
 
 }

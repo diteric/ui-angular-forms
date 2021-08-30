@@ -1,4 +1,5 @@
 <p>servers works!</p>
-<button class="btn" [disabled]="allowNewServer">Add Server</button>
+<button class="btn" (click)="bringServerUp()">Add Server</button>
+<p>{{getServerStatus()}}</p>
 <app-server></app-server>
 <app-server></app-server>
